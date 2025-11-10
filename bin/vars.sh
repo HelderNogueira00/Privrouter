@@ -19,8 +19,8 @@ function get_val() {
 ROUTING_TABLES='/etc/iproute2/rt_tables';
 PRIVROUTER_DIR='/etc/privrouter';
 
-LAN_CONF="${PRIVROUTER_DIR}/conf/lan.conf";
-MAIN_CONF="${PRIVROUTER_DIR}/conf/main.conf";
+LAN_CONF="${PRIVROUTER_DIR}/conf/main/lan.conf";
+MAIN_CONF="${PRIVROUTER_DIR}/conf/main/main.conf";
 
 TUNNELS_CONF="${PRIVROUTER_DIR}/conf/tunnels/";
 CIRCUITS_CONF="${PRIVROUTER_DIR}/conf/circuits/";
@@ -31,6 +31,9 @@ GATEWAYS_CONF="${PRIVROUTER_DIR}/conf/gateways/";
 
 #Load main configuration
 LAN_CIDR="$(get_val ${LAN_CONF} 'cidr')";
+LAN_ADDR="$(echo $LAN_CIDR | cut -d '/' -f1)";
 LAN_IFNAME="$(get_val ${LAN_CONF} 'ifname')";
-MAIN_BOOTWAIT="$(get_val ${MAIN_CONF}, 'net_wait')";
-MAIN_VIRTUAL="$(get_val ${MAIN_CONF}, 'net_virtual')";
+LAN_MANAGEMENTIP="$(get_val ${LAN_CONF} 'management_ip')";
+
+MAIN_BOOTWAIT="$(get_val ${MAIN_CONF} 'net_wait')";
+MAIN_VIRTUAL="$(get_val ${MAIN_CONF} 'net_virtual')";
