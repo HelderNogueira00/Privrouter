@@ -22,6 +22,9 @@ PRIVROUTER_DIR='/etc/privrouter';
 LAN_CONF="${PRIVROUTER_DIR}/conf/main/lan.conf";
 MAIN_CONF="${PRIVROUTER_DIR}/conf/main/main.conf";
 
+TEMP_DIR='/tmp/privrouter/';
+SEQUENCE_LOG='/tmp/privrouter/seq.log';
+
 TUNNELS_CONF="${PRIVROUTER_DIR}/conf/tunnels/";
 CIRCUITS_CONF="${PRIVROUTER_DIR}/conf/circuits/";
 PROFILES_CONF="${PRIVROUTER_DIR}/conf/profiles/";
