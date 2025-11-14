@@ -24,7 +24,7 @@ MAIN_CONF="${PRIVROUTER_DIR}/conf/main/main.conf";
 
 TEMP_DIR='/tmp/privrouter/';
 SEQUENCE_LOG='/tmp/privrouter/seq.log';
-
+TEMP_LOCAL_DIR=''
 
 TUNNELS_CONF="${PRIVROUTER_DIR}/conf/tunnels/";
 CIRCUITS_CONF="${PRIVROUTER_DIR}/conf/circuits/";
